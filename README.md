@@ -153,19 +153,23 @@ To address this, I used `GridSearchCV` with chosen hyperparameter grids to regul
 
 ## Brief Plots Overview 
 - **Confusion Matrices (XGBoost)**: Show how each model performed in terms of true/false positives and negatives.
+
     ![XGBoost Confusion Matrix](plots/xgboost_confusion_matrix.png)
 - **Feature Importance (XGBoost)**: Ranked importance of input features based on how much they contribute to the model's prediction. 
     - As shown below, the most influential features are `ST_Slope_Up`, followed by `ExerciseAngina_N` and `ChestPainType_ASY`.
+
     ![Feature Importance](plots/xgb_feature_importance.png)
 - **ROC Curve (XGBoost)**: Plots the true positive rate vs. false positive rate - AUC shows the model's ability to distinguish classes.
     ![ROC Curve](plots/xgboost_roc_curve.png)
 - **SHAP Bar Plot**: This plot shows the average absolute SHAP value for each feature, representing which features impact the model the most.
     - We can see that `ST_Slope_U`, `ChestPainType_ASY`, and `ExerciseAngina_N` are the contribute the most.
+
     ![SHAP Bar Plot](plots/shap_bar_plot.png)
 
 - **SHAP Summary Plot**: Provides a more detailed view of how a feature affect individual predictions.
     - Color represents the feature value (red = hight, blue = low).
     - Position (left or right) indicates whether the feature increases or decreases the likelihood of heart disease.
+    
     ![SHAP Summary Plot](plots/shap_summary_plot.png)
 
 
