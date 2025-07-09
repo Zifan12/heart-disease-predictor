@@ -29,6 +29,9 @@ y = df['HeartDisease']
 # Train-test split, 80% train, 20% test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) 
  
+'''
+Note: The below code was supposed to be used for upsampling but the result had almost no effect. 
+
 # Create a copy of the training set and add target as well as 'Sex' column
 # This is because it will be used for gender-specific resampling
 train_df = X_train.copy()
@@ -51,7 +54,7 @@ train_balanced = train_balanced.sample(frac=1, random_state=42).reset_index(drop
 # Separate features and target from the newly balanced training dataset
 X_train_balanced = train_balanced.drop(columns='HeartDisease')
 y_train_balanced = train_balanced['HeartDisease']
-
+'''
 
 # Define models 
 models = {

@@ -18,17 +18,19 @@ preprocessor = ColumnTransformer(
     ]
 )
 
-# Pipelines for Logistic Regression, RandomForestClassifier, XGBClassifier
+# Define Pipelines for Logistic Regression
 logistic_regression = Pipeline([
     ('preprocessor', preprocessor),
     ('classifier', LogisticRegression())
 ])
 
+# Define Pipelines for Random Forest
 random_forest = Pipeline([
     ('preprocessor', preprocessor),
     ('classifier', RandomForestClassifier())
 ])
 
+# Define Pipelines for XGBoost
 xg_boost = Pipeline([
     ('preprocessor', preprocessor),
     ('classifier', XGBClassifier(eval_metric='logloss'))
