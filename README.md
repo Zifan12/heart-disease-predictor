@@ -179,4 +179,5 @@ To address this, I used `GridSearchCV` with chosen hyperparameter grids to regul
     - Collecting more data for females or more data in general could help balance the dataset and improve fairness.
     - Tried upsampling by duplicating female samples, but it did not significantly improve results.
     - Did not use SMOTE becuase this is a medical context where life's are at stake. Synthesising new data may yield inaccurate predictions.
+    - Maybe try stratify=y in the train_test_split.
 - **Tune Model Further**: Although I tuned the hyperparameters using GridSearchCV, further performance improvements could be achieved by using more advanced optimization methods.
